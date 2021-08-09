@@ -40,11 +40,11 @@ def mystery_word(file):
     guess_number = 0
     guess_letter = []
     positions = []
-    print("The computer word is:", computer_word)
+    print("The computer word is:")
     #print("display_word", display_word)
 
     while computer_word != display_word and guess_number < 8:
-        print("display_word", display_word)
+        print(display_word)
         input_guess = input(' Guess a letter in your mystery word ').upper()
         if input_guess in random_word:
             guess_letter.append(input_guess)
@@ -62,7 +62,7 @@ def mystery_word(file):
     if computer_word == display_word:
         print("You win!")       
     if guess_number == 8:
-        print("You lose!")
+        print("You lose!", list_random_word)
 #python3 mystery_word.py words.txt
 
 
